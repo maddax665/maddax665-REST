@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AMLlist" type="AMLlistType"/>
+
+  <xs:complexType name="AMLlistType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="AMLlistEntry" type="AMLlistEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AMLlistEntry">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="typ" type="codeMax15"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="scope" type="codeMax15"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="code" type="codeMax15"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="dscr" type="Max200Text"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="cdScore" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="codeMax15">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9_]{3,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Max200Text">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="200"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>
