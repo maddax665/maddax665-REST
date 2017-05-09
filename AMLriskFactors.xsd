@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AMLriskFactors" type="AMLriskFactorList"/>
+
+  <xs:complexType name="AMLriskFactorList">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="10" name="AMLriskFactor" type="AMLriskFactor"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AMLriskFactor">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="name" type="Max30Text"/>
+      <xs:element minOccurs="0" maxOccurs="unbounded" name="value" type="AMLrfValue"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AMLrfValue">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="1" name="DPname" type="Max200Text"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="DPvalue" type="Max200Text"/>
+      <xs:element minOccurs="0" maxOccurs="1" name="DPscore" type="xs:positiveInteger"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="Max30Text">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="30"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Max200Text">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="200"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AMLriskFactors xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="AMLriskFactors.xsd">
+  <AMLriskFactor>
+    <name>Customer Type</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Industry/Occupation</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Product</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Channel</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.Resident</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.Domicile</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.Citizen</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.National</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.Transactions</name>
+  </AMLriskFactor>
+  <AMLriskFactor>
+    <name>Geography.ThirdParty</name>
+  </AMLriskFactor>
+</AMLriskFactors>
