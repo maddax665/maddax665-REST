@@ -4,15 +4,31 @@
   xsi:noNamespaceSchemaLocation="AMLriskFactors.xsd">
   <AMLriskFactor>
     <name>Customer Type</name>
+    <value>
+      <DPname>party.PartyType=P</DPname>
+      <DPvalue>Individual</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Industry/Occupation</name>
+    <value>
+      <DPname>party.Occupation.Type</DPname>
+      <DPvalue>Student</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Product</name>
+    <value>
+      <DPname>party.PartypartyProducts.PartyProduct.ProductFamily</DPname>
+      <DPvalue>1010</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Channel</name>
+    <value>
+      <DPname>party.PartyType=P</DPname>
+      <DPvalue>Individual</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Geography.Resident</name>
