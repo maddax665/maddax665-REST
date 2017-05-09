@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name="AMLweights" type="AMLweightsType"/>
+
+  <xs:complexType name="AMLweightsType">
+    <xs:sequence>
+      <xs:element minOccurs="1" maxOccurs="unbounded" name="AMLweight" type="AMLweightEntry"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:complexType name="AMLweightEntry">
+    <xs:sequence>
+      <xs:element minOccurs="0" maxOccurs="1" name="scope" type="codeMax15" default="GLOBAL"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="partyType" type="codeMax1"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="name" type="Max30Text"/>
+      <xs:element minOccurs="1" maxOccurs="1" name="weight" type="xs:decimal"/>
+    </xs:sequence>
+  </xs:complexType>
+
+  <xs:simpleType name="codeMax1">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9]{1,1}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="codeMax15">
+    <xs:restriction base="xs:string">
+      <xs:pattern value="[A-Z0-9_]{3,15}"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+  <xs:simpleType name="Max30Text">
+    <xs:restriction base="xs:string">
+      <xs:minLength value="1"/>
+      <xs:maxLength value="30"/>
+      <xs:whiteSpace value="collapse"/>
+    </xs:restriction>
+  </xs:simpleType>
+
+</xs:schema>

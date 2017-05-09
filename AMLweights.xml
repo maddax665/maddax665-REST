@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<AMLweights xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+  xsi:noNamespaceSchemaLocation="AMLweights.xsd">
+  <AMLweight>
+    <scope>GLOBAL</scope>
+    <partyType>H</partyType>
+    <name>GLOBAL</name>
+    <weight>0</weight>
+  </AMLweight>
+  <AMLweight>
+    <scope>CIB</scope>
+    <partyType>H</partyType>
+    <name>GLOBAL</name>
+    <weight>0</weight>
+  </AMLweight>
+  <AMLweight>
+    <scope>GLOBAL</scope>
+    <partyType>P</partyType>
+    <name>Customer Type</name>
+    <weight>0.2</weight>
+  </AMLweight>
+  <AMLweight>
+    <scope>GLOBAL</scope>
+    <partyType>P</partyType>
+    <name>Customer Type</name>
+    <weight>0.2</weight>
+  </AMLweight>
+  <AMLweight>
+    <scope>GLOBAL</scope>
+    <partyType>P</partyType>
+    <name>Customer Type</name>
+    <weight>0.2</weight>
+  </AMLweight>
+</AMLweights>
