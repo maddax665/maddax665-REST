@@ -22,16 +22,32 @@
       <DPname>party.PartypartyProducts.PartyProduct.ProductFamily</DPname>
       <DPvalue>1010</DPvalue>
     </value>
+    <value>
+      <DPname>party.PartypartyProducts.PartyProduct.ProductFamily</DPname>
+      <DPvalue>3010</DPvalue>
+    </value>
+    <value>
+      <DPname>party.PartypartyProducts.PartyProduct.ProductFamily</DPname>
+      <DPvalue>2010</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Channel</name>
     <value>
-      <DPname>party.PartyType=P</DPname>
-      <DPvalue>Individual</DPvalue>
+      <DPname>party.PartyDetails.FaceToFaceFlag</DPname>
+      <DPvalue>Y</DPvalue>
     </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Geography.Resident</name>
+    <value>
+      <DPname>PartyCountries.PartyCountry.CountryOfRelationship:CountryOfResidence</DPname>
+      <DPvalue>UK</DPvalue>
+    </value>
+    <value>
+      <DPname>PartyCountries.PartyCountry.CountryOfRelationship:CountryOfTaxResidence</DPname>
+      <DPvalue>SE</DPvalue>
+    </value>
   </AMLriskFactor>
   <AMLriskFactor>
     <name>Geography.Domicile</name>
